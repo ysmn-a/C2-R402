@@ -6,7 +6,7 @@ jobs:
   job1:
     # Sur un machine chez Github sur laquelle on demande l'installation d'ubuntu via Docker
     runs-on: ubuntu-latest
-    name: build
+    name: build test
     steps:
       - uses: actions/checkout@v2
       # Un script peut faire appel à d'autres scripts, ici celui d'installer Java
@@ -23,3 +23,4 @@ jobs:
           chmod u+x ./gradlew
           ./gradlew test -i | grep -E " > |BUILD"
           ./gradlew jacocoTestReport
+# test 
